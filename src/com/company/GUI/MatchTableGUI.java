@@ -154,6 +154,5 @@ public class MatchTableGUI extends Application {
         System.out.println("Clubs have been loaded successfully");
         ObservableList<SportsClub> sportsclubs = FXCollections.observableArrayList(sportsClubArrayList);
         return sportsclubs;
-//huluhlulu
     }
 }
