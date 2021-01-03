@@ -1,6 +1,4 @@
-package com.company;
-
-import java.util.Objects;
+package lk.iit.oop.pojoclasess;
 
 public class Schoolfootballclub extends SportsClub {
 	public Schoolfootballclub(String club_name,String location,double various_statictics, String season, int wins, int draws,int defearts, int recieved_goals,int scored_goals, int current_points, int match_count){
@@ -8,13 +6,9 @@ public class Schoolfootballclub extends SportsClub {
 
 	}
 
-
-
 	@Override
 	public String toString() {
 		return "School football Club";
 	}
-
-
 
 }

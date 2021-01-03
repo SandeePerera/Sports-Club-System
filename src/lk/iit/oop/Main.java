@@ -1,6 +1,15 @@
-package com.company;
+package lk.iit.oop;
 
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
+import lk.iit.oop.Exceptions.Validation;
+import lk.iit.oop.pojoclasess.FootballClub;
+import lk.iit.oop.pojoclasess.Schoolfootballclub;
+import lk.iit.oop.pojoclasess.SportsClub;
+import lk.iit.oop.pojoclasess.Univercityfootballclub;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -8,8 +17,7 @@ import java.util.Scanner;
 import static javafx.application.Application.launch;
 
 
-public class Main  {
-
+public class Main {
     private static LeagueManager manager = new PremierLeagueManager();
     static Scanner in = new Scanner(System.in).useDelimiter("\n");
 
@@ -86,12 +94,21 @@ public class Main  {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         manager.retrieveData("saveFile.txt"); //lodad data from save file
 
-        menuloop:
-        while (true) {   // main menu
+        menuloop:  // welcome note and the user validation
+        // I named it menuloop
 
-            System.out.println("                                                   \n");
-            System.out.println(" ********* Welcome to the Sports Club  ********* \n");
-            System.out.println("                                               ");
+        System.out.println("                                                   \n");
+        System.out.println(" ********* Welcome to the Sports Club  ********* \n");
+        System.out.println("                                               ");
+        System.out.println("      ");
+        System.out.print("Enter the User name  -:  ");
+        String username = Validation.usernameValidation(in);
+        System.out.print("Enter the Password    -: ");
+        int counts = Integer.parseInt(Validation.passwordValidation(in));
+
+        menu:
+        while (true) {
+            // main menu of the system
             System.out.println("      ");
             System.out.println("\t\tWelcome to the Menu");
             System.out.println("      ");
@@ -133,14 +150,13 @@ public class Main  {
 
                 case 7:
                     manager.saveData("saveFile.txt");    // save data to txt file
-                    break menuloop;
+                    break menu;
                 default:
                     System.out.println("Choice is invalid!!! Please re-enter...");
             }
         }
 
     }
-
     private static void matchResultGUI() {
         manager.matchResultGUI();
     }
@@ -155,16 +171,14 @@ public class Main  {
         int pointOne = sc.nextInt();
 
         System.out.println("Please enter the name of the club Two you want to update:");
-        String clubTname = sc.nextLine();
+        String clubTname = sc.next();
 
         System.out.println("Please enter the points:");
         int pointTwo = sc.nextInt();
 
-        if (pointOne > pointTwo) {
-
-        }
-//manager.update_match(clubname);
+        manager.update_match(clubOname,clubTname,pointOne,pointTwo);  //sent data to update_club in PremierleagueManager class
     }
+
 
     private static void delete_club() {
         System.out.println("Please enter the name of the club you want to remove:");
@@ -185,6 +199,22 @@ public class Main  {
         manager.display_Premier_league();
     }
 
+
+/*    @Override
+    public void start(Stage primaryStage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("lk.iit.oop.GUI.Login.fxml"));
+        // primaryStage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.setTitle("User Login");
+        primaryStage.setScene(new Scene(root, 500, 300));
+        primaryStage.show();
+    }
+
+
+
+    public static void main(String[] args) {
+        launch(args);
+    }*/
 }
+
 
 

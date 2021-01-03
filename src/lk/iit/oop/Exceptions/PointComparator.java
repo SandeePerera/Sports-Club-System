@@ -1,4 +1,6 @@
-package com.company;
+package lk.iit.oop.Exceptions;
+
+import lk.iit.oop.pojoclasess.SportsClub;
 
 import java.util.Comparator;
 

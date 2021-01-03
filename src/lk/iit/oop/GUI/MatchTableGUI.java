@@ -1,12 +1,10 @@
-package com.company.GUI;
+package lk.iit.oop.GUI;
 
-import com.company.PremierLeagueManager;
-import com.company.SportsClub;
+import lk.iit.oop.PremierLeagueManager;
+import lk.iit.oop.pojoclasess.SportsClub;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.collections.transformation.FilteredList;
-import javafx.collections.transformation.SortedList;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -21,7 +19,6 @@ import javafx.stage.Stage;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.function.Predicate;
 
 
 public class MatchTableGUI extends Application {

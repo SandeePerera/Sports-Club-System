@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #808000;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.iit.oop.GUI.FX.Contraller">
+   <children>
+      <Label layoutX="136.0" layoutY="14.0" prefHeight="55.0" prefWidth="439.0" text="Welcome to Sports Club">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Pane layoutX="14.0" layoutY="78.0" prefHeight="268.0" prefWidth="426.0" style="-fx-background-color: #FFA500;">
+         <children>
+            <ImageView fitHeight="249.0" fitWidth="413.0" layoutX="7.0" layoutY="10.0">
+               <image>
+                  <Image url="@../../../../../../../../Pictures/666.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="197.0" layoutY="87.0" prefHeight="81.0" prefWidth="194.0" text="Welcome !!!">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Label layoutX="153.0" layoutY="185.0" prefHeight="35.0" prefWidth="238.0" text="Have a nice day ...!!!">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Button fx:id="exsit" layoutX="483.0" layoutY="346.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="104.0" text="Exsit" />
+      <Label layoutX="456.0" layoutY="99.0" text="Enter User Name">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="username" layoutX="454.0" layoutY="124.0" prefHeight="25.0" prefWidth="136.0" />
+      <Label layoutX="456.0" layoutY="175.0" text="Enter Password">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="password" layoutX="454.0" layoutY="200.0" prefHeight="25.0" prefWidth="136.0" />
+      <Button fx:id="login" layoutX="464.0" layoutY="259.0" mnemonicParsing="false" onAction="#validateInfo" prefHeight="25.0" prefWidth="104.0" text="Login" />
+   </children>
+</AnchorPane>

@@ -1,4 +1,6 @@
-package com.company;
+package lk.iit.oop;
+
+import lk.iit.oop.pojoclasess.SportsClub;
 
 import java.io.IOException;
 
@@ -7,7 +9,7 @@ public interface LeagueManager {
     void delete_club( String club_name);
     void display_statistics(String club_name);
     void display_Premier_league();
-    void update_match(String club_name);
+    void update_match(String clubOname, String club_name, int pointOne, int pointTwo);
     void matchResultGUI();
 
 

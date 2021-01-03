@@ -1,8 +1,7 @@
-package com.company;
+package lk.iit.oop.pojoclasess;
 
 import java.io.Serializable;
 import java.util.Objects;
-
 
 public abstract class SportsClub implements Serializable {
 
